@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { supabase } from '../lib/supabaseClient'
 import SearchBar from '../components/SearchBar'
 
+
 export default function Home({ attractions }) {
   const router = useRouter()
   const [showHeaderSearch, setShowHeaderSearch] = useState(false)
@@ -90,15 +91,13 @@ export default function Home({ attractions }) {
           </div>
 
           {/* HEADER ACTIONS */}
-          <div className="flex items-center gap-4 text-sm text-gray-700 whitespace-nowrap">
+          <div className="flex items-center gap-4 text-sm text-gray-700 whitespace-nowrap ml-auto">
             <button className="hover:text-indigo-600">
               List Your Attraction
             </button>
             <button className="hover:text-indigo-600">Support</button>
             <button className="hover:text-indigo-600">EN/INR</button>
-            <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg">
-              Login
-            </button>
+            <button className="hover:text-indigo-600">Profile</button>
           </div>
         </div>
       </header>
@@ -228,7 +227,6 @@ export default function Home({ attractions }) {
           © {new Date().getFullYear()} BookMyAttractions. All rights reserved.
         </div>
       </footer>
-
     </div>
   )
 }
